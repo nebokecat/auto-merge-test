@@ -1,0 +1,17 @@
+name: some long test
+on:
+  pull_request:
+
+jobs:
+  long-test:
+    runs-on: ubuntu-latest
+    steps:
+      - run: sleep 60
+
+  failable:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - run: sleep 30
+      # if './hoge' exists, this test passes
+      - run: ls hoge
