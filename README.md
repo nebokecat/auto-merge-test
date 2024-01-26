@@ -1,4 +1,4 @@
 # auto-merge-test
 auto-merge test
 
-hoge
+fuga
